@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="Tleprediction : Predict seizure onset laterality of temporal lobe epilepsy patients from neuroimaging asymmetries">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Tleprediction</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/dorianps/TLEprediction">View on GitHub</a>
+
+          <h1 id="project_title">Tleprediction</h1>
+          <h2 id="project_tagline">Predict seizure onset laterality of temporal lobe epilepsy patients from neuroimaging asymmetries</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/dorianps/TLEprediction/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/dorianps/TLEprediction/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h2>
+<a id="note-the-training-data-are-currently-not-available-they-will-become-available-once-the-public-release-is-approved-please-contact-the-author-for-any-questions" class="anchor" href="#note-the-training-data-are-currently-not-available-they-will-become-available-once-the-public-release-is-approved-please-contact-the-author-for-any-questions" aria-hidden="true"><span class="octicon octicon-link"></span></a>Note! The training data are currently not available. They will become available once the public release is approved. Please contact the author for any questions.</h2>
+
+<h1>
+<a id="prediction-of-seizure-laterality" class="anchor" href="#prediction-of-seizure-laterality" aria-hidden="true"><span class="octicon octicon-link"></span></a>Prediction of seizure laterality</h1>
+
+<p>This project provides the tools and necessary data to classify new temporal lobe epilepsy patients based on 3 PET asymmetries. Two steps are required for the prediction: obtain the asymmetries in Matlab (part 1) and use the values to classify the patient in R (part 2).  </p>
+
+<p>Requirements:</p>
+
+<ul>
+<li>
+<a href="http://www.mathworks.com/products/matlab/">Matlab</a> with <a href="http://www.fil.ion.ucl.ac.uk/spm/software/download.html">SPM8</a> installed<br>
+</li>
+<li>
+<a href="http://www.r-project.org/">R</a> or <a href="http://www.rstudio.com/products/rstudio/download/">Rstudio</a> (recommended)</li>
+<li>Platform independent (Windows,Linux,Mac)<br>
+</li>
+</ul>
+
+<h2>
+<a id="part-1-obtain-3-pet-asymmetries" class="anchor" href="#part-1-obtain-3-pet-asymmetries" aria-hidden="true"><span class="octicon octicon-link"></span></a>PART 1: obtain 3 PET asymmetries</h2>
+
+<p>Download <a href="https://github.com/dorianps/TLEprediction/archive/master.zip">all files</a> and add the folder into the Matlab path. Write the command <code>CalculatePETasymmetries</code> (case sensitive). The script will ask you for three files:<br>
+1. PET volume (i.e., PET.nii)<br>
+2. MRI volume (i.e. 001.nii)<br>
+3. Parcellation from Freesurfer (i.e., wmparc.nii)<br>
+<em>Note: the process relies on SPM8 functions, other SPM versions not tested.</em>  </p>
+
+<p>The script will coregister PET on MRI and reslice the parcellation. It is assumed that the MRI and parcellation volumes are already registered, and that PET and MRI have the same initial orientation.<br>
+The smoothed masks will be computed and saved in the PET folder. Finally, the three asymmetries are computed and displayed.<br>
+PLEASE DOUBLE CHECK THAT PET HAS BEEN WELL COREGISTERED ONTO MRI !</p>
+
+<h2>
+<a id="part-2-classify-the-patient" class="anchor" href="#part-2-classify-the-patient" aria-hidden="true"><span class="octicon octicon-link"></span></a>PART 2: classify the patient</h2>
+
+<p>The R script is fully automated and requires only the three asymmetry values obtained in Matlab.  </p>
+
+<p><strong>QUICK USAGE:</strong><br>
+(Windows):<br>
+<code>source('https://raw.githubusercontent.com/dorianps/TLEprediction/master/TLEpredict.R', echo=F)</code>  </p>
+
+<p>(Linux/Mac)<br>
+Install RCurl the first time: <code>install.packages("RCurl")</code><br>
+Then run command:<br>
+<code>library(RCurl) ; eval( expr = parse( text = getURL("https://raw.githubusercontent.com/dorianps/TLEprediction/master/TLEpredict.R", ssl.verifypeer=FALSE) ))</code>  </p>
+
+<p>Enter the values obtained in Matlab and get the classification statistics.  </p>
+
+<p><strong>OFFLINE USAGE:</strong><br>
+Open the file <a href="https://github.com/dorianps/TLEprediction/blob/master/TLEpredict.R">TLEpredict.R</a> in R and follow the instructions.  </p>
+
+<p><strong>PREDICTION EXAMPLE:</strong><br>
+<code>source('https://raw.githubusercontent.com/dorianps/TLEprediction/master/TLEpredict.R', echo=F)</code><br>
+  Assymetry for PET-mesial: -0.037443<br>
+  Assymetry for PET-hippo-var: 0.050887<br>
+  Assymetry for PET-entire-var: 0.12806<br>
+Number of bootstraps (i.e., 10000): 10000<br>
+Exclude cases from training (0=none, 1=Engel class III/IV, 2=non-operated, 3=1+2): 0<br>
+<em>Using 58 TLE patients for training (28 left)...</em>  </p>
+
+<blockquote>
+<p>|=============================================================| 100%<br>
+ Patient Classification (10000 bootstraps):<br>
+  [1] "left TLE: 1.48%"<br>
+  [1] "right TLE: 98.52%"<br>
+Average Posterior Probability (0=left, 1=right):<br>
+  [1] 0.941<br>
+95% CI of posterior probability (0.5=chance):<br>
+   2.5% 97.5%<br>
+  0.631 1.000   </p>
+</blockquote>
+
+<p><strong>NOTES</strong><br>
+The required <code>brglm</code> package will be automatically installed if not present in your R libraries.<br>
+The script will automatically stop if asymmetry values entered are out of [-1 1] range, and will warn if values entered are out of the TLE population range.</p>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Tleprediction maintained by <a href="https://github.com/dorianps">dorianps</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
