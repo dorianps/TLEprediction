@@ -10,9 +10,10 @@
 This project provides the tools and necessary data to classify new temporal lobe epilepsy patients based on 3 PET asymmetries. Two steps are required for the prediction: obtain the asymmetries in Matlab (part 1) and use the values to classify the patient in R (part 2).  
 
 Requirements:
-* [Matlab](http://www.mathworks.com/products/matlab/) with [SPM8](http://www.fil.ion.ucl.ac.uk/spm/software/download.html) installed  
-* [R](http://www.r-project.org/) or [Rstudio](http://www.rstudio.com/products/rstudio/download/) (recommended)
-* Platform independent (Windows,Linux,Mac)  
+* Parcellation of T1 with Freesurfer
+* A working [Matlab](http://www.mathworks.com/products/matlab/) with [SPM8](http://www.fil.ion.ucl.ac.uk/spm/software/download.html) 
+* [R](http://www.r-project.org/) or, even better, [Rstudio](http://www.rstudio.com/products/rstudio/download/) 
+ 
 
 ## PART 1: obtain 3 PET asymmetries  
 Download [all files](https://github.com/dorianps/TLEprediction/archive/master.zip) and add the folder into the Matlab path. Write the command `CalculatePETasymmetries` (case sensitive). The script will ask you for three files:    
