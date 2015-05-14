@@ -1,5 +1,5 @@
    
-## Note! The training data will become available once the public release is approved by the Institutional Review Board. Please contact the author for any questions.
+## Note! The release of the training data is pending approval by the Institutional Review Board.
    
    
    
