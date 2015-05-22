@@ -67,10 +67,11 @@ Average Posterior Probability (0=left, 1=right):
   
     
     
+*****
 **NOTES**  
 The required `brglm` package will be automatically installed if not present in your R libraries.  
 The script will automatically stop if asymmetry values entered are out of [-1 1] range, and will warn if values entered are out of the TLE population range.
-
+*****
 **Questions?**
 - Why is Freesurfer parcellation needed?  
 > To know where to look in the PET image and get the right asymmetries of signal and signal variance.
