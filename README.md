@@ -73,7 +73,7 @@ The script will automatically stop if asymmetry values entered are out of [-1 1]
 
 **Questions?**
 - Why is Freesurfer parcellation needed?  
-_To know where to look in the PET image and get the right asymmetries of signal and signal variance._
+> To know where to look in the PET image and get the right asymmetries of signal and signal variance.
 - Why can't you do everything in Matlab or everything in R.  
 _R has the `brglm` package which allows to run penalized logistic regression, Matlab doesn't._  
 _Matlab has the SPM toolbox which allows to register images, R is behind with packages for that purpose, existing packages are complex and not platform independent._  
