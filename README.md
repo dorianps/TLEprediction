@@ -51,7 +51,7 @@ The script will automatically stop if asymmetry values entered are out of [-1 1]
 **Why can't you do everything in Matlab or everything in R?**  
 *R can run easily run penalized logistic regression, but has limited resources for image processing.*  
 *Matlab can do image processing through SPM, but has limited resources for penalized regression.*  
-*Unifying the pipeline in a single software may be an option for the future.*  
+*Unifying the pipeline might be an option for the future.*  
 **When will the training data be available?**  
 *The training data is available since July 1, 2015*  
 
