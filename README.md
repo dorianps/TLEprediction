@@ -53,8 +53,8 @@ The script will automatically stop if asymmetry values entered are out of [-1 1]
 > *Matlab has the SPM toolbox which allows to register images, R is behind with packages for that purpose, existing packages are complex and platform dependent.*  
 > *I may work on unifying the pipeline if there are numerous requests.*
 - When will the training data be available?  
-> *We are waiting for IRB approval since March 2015. We will wait for their decision, and if the publication request is declined, we may provide predefined bootstrapped models, which may limit the randomness of predictions and require further downloads. But at least you will be able to run predictions.*
-*****
+> *We are waiting for IRB approval since March 2015. We will wait for their decision, and if the publication request is declined, we may provide predefined bootstrapped models, which may limit the randomness of predictions and require further downloads. But at least you will be able to run predictions.*  
+*****  
 **PREDICTION EXAMPLE:**  
 `source('https://raw.githubusercontent.com/dorianps/TLEprediction/master/TLEpredict.R', echo=F)`  
   Assymetry for PET-mesial: -0.037443  
