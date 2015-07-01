@@ -46,7 +46,7 @@ The required `brglm` package will be automatically installed if not present in y
 The script will automatically stop if asymmetry values entered are out of [-1 1] range, and will warn if values entered are out of the TLE population range.
 *****
 **Questions?**
-* Why is Freesurfer parcellation needed?*  
+*Why is Freesurfer parcellation needed?*  
 > *To know where to look in the PET image and get the right asymmetries of signal and signal variance.*  
 - Why can't you do everything in Matlab or everything in R?  
 > *R has the 'brglm' package which allows to run penalized logistic regression, Matlab doesn't.*  
