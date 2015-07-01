@@ -39,7 +39,7 @@ Then run command:
 Enter the values obtained in Matlab and get the classification statistics.  
 
 **OFFLINE USAGE:**  
-Open the file [TLEpredict.R](https://github.com/dorianps/TLEprediction/blob/master/TLEpredict.R) in R and follow the instructions.  
+Run the file [TLEpredict.R](https://github.com/dorianps/TLEprediction/blob/master/TLEpredict.R) in R and follow the instructions.  
 *****
 **NOTES**  
 The required `brglm` package will be automatically installed if not present in your R libraries.  
