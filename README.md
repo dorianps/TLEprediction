@@ -1,6 +1,5 @@
-```html
-<span style="color: green; weight: bold">Note, training data are now available.</span>
-```
+Note, training data are now available.
+
 
 # Prediction of seizure laterality
 
