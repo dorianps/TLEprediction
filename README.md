@@ -49,7 +49,10 @@ The script will automatically stop if asymmetry values entered are out of [-1 1]
 >**Why is Freesurfer parcellation needed?**  
 *To know where to look in the PET image and get the right asymmetries of signal and signal variance.*  
 **How can I get the parcellation from Freesurfer?**  
-*Check the [Freesurfer Beginner guide](https://surfer.nmr.mgh.harvard.edu/fswiki/FreeSurferBeginnersGuide). The command `recon-all` is what you need, without complicated options. Something like `recon-all -i T1.nii -s JohnB -sd /home/Freesurfer/ -all` will output the analysis of T1.nii in a folder named JohnB in /home/Freesurfer/. You will need the wmparc file in the "mri" folder. You can convert it to niftii with something like `mri_convert --in_type mgz --out_type nii --out_orientation RAS /home/Freesurfer/JohnB/mri/wmparc.mgz `*  
+*Check the [Freesurfer Beginner guide](https://surfer.nmr.mgh.harvard.edu/fswiki/FreeSurferBeginnersGuide). Once you install Freesurfer, a command like*  
+`recon-all -i T1.nii -s JohnB -sd /home/Freesurfer/ -all`  
+*will output the analysis of T1.nii in a folder named JohnB in /home/Freesurfer/. The wmparc file is what you need, convert it to niftii if necessary*  
+`mri_convert --in_type mgz --out_type nii --out_orientation RAS /home/Freesurfer/JohnB/mri/wmparc.mgz `  
 **Why can't you do everything in Matlab or everything in R?**  
 *R can easily run penalized logistic regression, but has limited resources for image processing.*  
 *Matlab can do image processing through SPM, but has limited resources for penalized regression.*  
