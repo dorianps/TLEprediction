@@ -53,6 +53,8 @@ The script will automatically stop if asymmetry values entered are out of [-1 1]
 `recon-all -i T1.nii -s JohnB -sd /home/Freesurfer/ -all`  
 *will output the analysis of T1.nii in a folder named JohnB in /home/Freesurfer/. The wmparc file is what you need, convert it to niftii if necessary*  
 `mri_convert --in_type mgz --out_type nii --out_orientation RAS /home/Freesurfer/JohnB/mri/wmparc.mgz `  
+**I don't have a T1 image, I have only PET. Can I still use this tool?**  
+*Maybe! Perhaps you can use someone's else T1 as reference, PET will be registered to that and will use the other person's parcellation. The fit will not be as good, but given the low resolution nature of PET it may still work. This solution has NOT beed tested.*  
 **Why can't you do everything in Matlab or everything in R?**  
 *R can easily run penalized logistic regression, but has limited resources for image processing.*  
 *Matlab can do image processing through SPM, but has limited resources for penalized regression.*  
