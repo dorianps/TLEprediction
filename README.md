@@ -56,9 +56,9 @@ The script will automatically stop if asymmetry values entered are out of [-1 1]
 **I don't have a T1 image, I have only PET. Can I still use this tool?**  
 *Formally not. But one idea is to use someone's else T1 as reference (or a template), PET will be registered to that and will use the respective parcellation. The fit will not be as good, but given the smoothed nature of the PET signal, it may still work. This idea has never beed tested.*  
 **Why can't you do everything in Matlab or everything in R?**  
-*R can easily run penalized logistic regression, but has limited resources for image processing.*  
 *Matlab can do image processing through SPM, but has limited resources for penalized regression.*  
-*Unifying the pipeline might be an option for the future.*  
+*R can easily run penalized logistic regression, but has limited resources for image processing.*  
+*We might be able to unify the pipeline in the future.*  
 **When will the training data be available?**  
 *The training data is available since July 1, 2015*  
 
