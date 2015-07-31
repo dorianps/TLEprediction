@@ -1,9 +1,6 @@
-Note, training data are now available.
-
-
 # Prediction of seizure laterality
 
-This project provides the tools and necessary data to predict the laterality of seizure onset in new temporal lobe epilepsy patients based on 3 PET asymmetries. The prediciton is done in two steps: obtain the asymmetries in Matlab (part 1) and use the values to classify the patient in R (part 2).  
+This project provides the tools and data necessary to predict the laterality of seizure onset in temporal lobe epilepsy patients based on 3 PET asymmetries. The prediciton is done in two steps: obtain the asymmetries in Matlab (part 1) and use the values to classify the patient in R (part 2).  
 
 Requirements:
 * Parcellation of T1 with Freesurfer (sorry, can't avoid this)
