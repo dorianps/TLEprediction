@@ -1,8 +1,7 @@
 # Prediction of seizure laterality
 
-See [Neuroimage Clin (9) 20-31](http://dx.doi.org/10.1016/j.nicl.2015.07.010) for details on the computation process.  
 
-The tools provided here utilize three PET asymmetries to predict the laterality of seizure onset in temporal lobe epilepsy. The prediciton is done in two steps: obtain the asymmetries in Matlab (part 1) and use the values to classify the patient in R (part 2).  
+The tools provided here utilize three PET asymmetries to predict the laterality of seizure onset in temporal lobe epilepsy. See [Neuroimage Clin (9) 20-31](http://dx.doi.org/10.1016/j.nicl.2015.07.010) for details on the computation process.  
 
 Requirements:
 * An interictal FDG-PET scan
@@ -11,6 +10,7 @@ Requirements:
 * SOFTWARE: [Matlab](http://www.mathworks.com/products/matlab/) with [SPM8](http://www.fil.ion.ucl.ac.uk/spm/software/download.html) 
 * SOFTWARE: [R](http://www.r-project.org/) or, even better, [Rstudio](http://www.rstudio.com/products/rstudio/download/) 
  
+ The prediciton is done in two steps: obtain the asymmetries in Matlab (part 1) and use the values to classify the patient in R (part 2).  
 
 ## PART 1: obtain 3 PET asymmetries  
 Download [all files](https://github.com/dorianps/TLEprediction/archive/master.zip) and add the folder into the Matlab path. Write the command `CalculatePETasymmetries` (case sensitive). The script will ask you for three files:    
