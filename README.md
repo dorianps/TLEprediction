@@ -1,5 +1,7 @@
 # Prediction of seizure laterality
 
+See [Neuroimage Clin (9) 20-31](http://dx.doi.org/10.1016/j.nicl.2015.07.010) for details on the computation process.  
+
 This project provides the tools and data necessary to predict the laterality of seizure onset in temporal lobe epilepsy patients based on 3 PET asymmetries. The prediciton is done in two steps: obtain the asymmetries in Matlab (part 1) and use the values to classify the patient in R (part 2).  
 
 Requirements:
