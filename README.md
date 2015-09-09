@@ -7,7 +7,7 @@ The tools provided here utilize three PET asymmetries to predict the laterality 
 Requirements:
 * An interictal [FDG-PET scan](https://en.wikipedia.org/wiki/Positron_emission_tomography){:target="_blank"}
 * A T1-weighted MRI parcellated with Freesurfer (sorry, can't avoid this)
-* A working [Matlab](http://www.mathworks.com/products/matlab/){:target="_blank"} with [SPM8](http://www.fil.ion.ucl.ac.uk/spm/software/download.html) 
+* A working [Matlab](http://www.mathworks.com/products/matlab/) with [SPM8](http://www.fil.ion.ucl.ac.uk/spm/software/download.html) 
 * [R](http://www.r-project.org/) or, even better, [Rstudio](http://www.rstudio.com/products/rstudio/download/) 
  
 
