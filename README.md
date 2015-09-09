@@ -5,10 +5,11 @@ See [Neuroimage Clin (9) 20-31](http://dx.doi.org/10.1016/j.nicl.2015.07.010) fo
 The tools provided here utilize three PET asymmetries to predict the laterality of seizure onset in temporal lobe epilepsy. The prediciton is done in two steps: obtain the asymmetries in Matlab (part 1) and use the values to classify the patient in R (part 2).  
 
 Requirements:
-* An interictal [FDG-PET scan](https://en.wikipedia.org/wiki/Positron_emission_tomography)
-* A T1-weighted MRI parcellated with Freesurfer (sorry, can't avoid this)
-* A working [Matlab](http://www.mathworks.com/products/matlab/) with [SPM8](http://www.fil.ion.ucl.ac.uk/spm/software/download.html) 
-* [R](http://www.r-project.org/) or, even better, [Rstudio](http://www.rstudio.com/products/rstudio/download/) 
+* An interictal FDG-PET scan
+* A T1-weighted MRI
+* The parcellation of T1 with Freesurfer (sorry, can't avoid this)
+* SOFTWARE: A working [Matlab](http://www.mathworks.com/products/matlab/) with [SPM8](http://www.fil.ion.ucl.ac.uk/spm/software/download.html) 
+* SOFTWARE: [R](http://www.r-project.org/) or, even better, [Rstudio](http://www.rstudio.com/products/rstudio/download/) 
  
 
 ## PART 1: obtain 3 PET asymmetries  
