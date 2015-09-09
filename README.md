@@ -1,7 +1,7 @@
 # Prediction of seizure laterality
 
 
-The tools provided here utilize three PET asymmetries to predict the laterality of seizure onset in temporal lobe epilepsy. See [Neuroimage Clin (9) 20-31](http://dx.doi.org/10.1016/j.nicl.2015.07.010) for details on the computation process.  
+The tools provided here utilize three PET asymmetries to predict the laterality of seizure onset in temporal lobe epilepsy. See [Neuroimage Clin 2015 (9) 20-31](http://dx.doi.org/10.1016/j.nicl.2015.07.010) for details on the computation process.  
 
 Requirements:
 * An interictal FDG-PET scan
