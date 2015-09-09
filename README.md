@@ -8,7 +8,7 @@ Requirements:
 * An interictal FDG-PET scan
 * A T1-weighted MRI
 * The parcellation of T1 with Freesurfer (sorry, can't avoid this)
-* SOFTWARE: A working [Matlab](http://www.mathworks.com/products/matlab/) with [SPM8](http://www.fil.ion.ucl.ac.uk/spm/software/download.html) 
+* SOFTWARE: [Matlab](http://www.mathworks.com/products/matlab/) with [SPM8](http://www.fil.ion.ucl.ac.uk/spm/software/download.html) 
 * SOFTWARE: [R](http://www.r-project.org/) or, even better, [Rstudio](http://www.rstudio.com/products/rstudio/download/) 
  
 
