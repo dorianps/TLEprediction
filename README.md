@@ -7,8 +7,8 @@ Requirements:
 * An interictal FDG-PET scan
 * A T1-weighted MRI
 * The parcellation of T1 with Freesurfer (sorry, can't avoid this)
-* SOFTWARE: [Matlab](http://www.mathworks.com/products/matlab/) with [SPM8](http://www.fil.ion.ucl.ac.uk/spm/software/download.html) 
-* SOFTWARE: [R](http://www.r-project.org/) or, even better, [Rstudio](http://www.rstudio.com/products/rstudio/download/) 
+* SOFTWARE 1: [Matlab](http://www.mathworks.com/products/matlab/) with [SPM8](http://www.fil.ion.ucl.ac.uk/spm/software/download.html) 
+* SOFTWARE 2: [R](http://www.r-project.org/) or, even better, [Rstudio](http://www.rstudio.com/products/rstudio/download/) 
   
 The prediciton is done in two steps: obtain the asymmetries in Matlab (part 1) and use the values to classify the patient in R (part 2).  
 
