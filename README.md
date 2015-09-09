@@ -26,7 +26,7 @@ PLEASE DOUBLE CHECK THAT PET HAS BEEN WELL COREGISTERED ONTO MRI !
 
 
 ## PART 2: classify the patient  
-The R script is fully automated and requires only the three asymmetry values obtained in Matlab.  
+The R script is fully automated and requires only the three values obtained in Matlab.  
 
 **QUICK USAGE:**  
 (Windows):  
